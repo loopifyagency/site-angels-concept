@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T18:27:51Z",
+  "title": "Design System: Angel’s Concept",
+  "extensions": {
+    "colorMeta": {
+      "papier": {
+        "role": "neutral",
+        "displayName": "Papier d’agenda",
+        "canonical": "#ECE3D4",
+        "tonalRamp": [
+          "#F6F0E5",
+          "#ECE3D4",
+          "#DACDB6"
+        ]
+      },
+      "surligneur": {
+        "role": "primary",
+        "displayName": "Surligneur lime",
+        "canonical": "#F8FBA4",
+        "tonalRamp": [
+          "#FCFDD6",
+          "#F8FBA4",
+          "#EBDCAA"
+        ]
+      },
+      "encre": {
+        "role": "neutral",
+        "displayName": "Encre brun-noir",
+        "canonical": "#2A211C",
+        "tonalRamp": [
+          "#5E5046",
+          "#2A211C"
+        ]
+      },
+      "nuit-olive": {
+        "role": "neutral",
+        "displayName": "Couverture olive nuit",
+        "canonical": "#1D2316",
+        "tonalRamp": [
+          "#2B3320",
+          "#1D2316"
+        ]
+      },
+      "or-feuille": {
+        "role": "secondary",
+        "displayName": "Or de feuille",
+        "canonical": "#B5893A",
+        "tonalRamp": [
+          "#EBD08A",
+          "#B5893A",
+          "#8E6B22"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Young Serif",
+        "purpose": "Nom de marque, titres, prix et chiffres."
+      },
+      "body": {
+        "displayName": "Figtree",
+        "purpose": "Texte courant, étiquettes, interface."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tirage-pose",
+        "value": "0 28px 40px -24px rgba(42,33,28,.55)",
+        "purpose": "Photos du hero et de la galerie."
+      },
+      {
+        "name": "carte-posee",
+        "value": "0 34px 50px -36px rgba(42,33,28,.6)",
+        "purpose": "Cartes de chapitres, fiches d’avis."
+      },
+      {
+        "name": "ruban",
+        "value": "0 2px 4px -1px rgba(42,33,28,.28), inset 0 0 0 1px rgba(42,33,28,.07)",
+        "purpose": "Ruban adhésif translucide."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-expo-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Révélations, survols, ouvertures."
+      },
+      {
+        "name": "ease-expo-in-out",
+        "value": "cubic-bezier(.76,0,.24,1)",
+        "purpose": "Menu plein écran, sortie du préchargeur (expo.inOut GSAP)."
+      },
+      {
+        "name": "scrub",
+        "value": "0.6 à 0.7 s",
+        "purpose": "Lissage du pin d’histoire et du défilement horizontal."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-large",
+        "value": "480px"
+      },
+      {
+        "name": "tablette",
+        "value": "700px"
+      },
+      {
+        "name": "bureau (pin + horizontal)",
+        "value": "900px"
+      },
+      {
+        "name": "navigation complète",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ticket",
+      "kind": "button",
+      "refersTo": "ticket",
+      "description": "Bouton d’action principal : talon perforé, encoches, remplissage lime au survol.",
+      "html": "<a class=\"ds-ticket\" href=\"#\"><span class=\"m\">Prendre rendez-vous</span><span class=\"s\">→</span></a>",
+      "css": ".ds-ticket{display:inline-flex;background:#2A211C;color:#F8FBA4;border-radius:14px;font:700 16px Figtree,sans-serif;text-decoration:none}.ds-ticket .m{padding:17px 22px 17px 27px}.ds-ticket .s{padding:17px 18px;border-left:2px dashed rgba(248,251,164,.45)}"
+    },
+    {
+      "name": "Onglet de carte",
+      "kind": "chip",
+      "refersTo": "tab-selected",
+      "description": "Intercalaire d’agenda ; actif en lime.",
+      "html": "<button class=\"ds-tab\">Ongles <small>12</small></button>",
+      "css": ".ds-tab{background:#F8FBA4;color:#2A211C;border:2px solid #2A211C;border-bottom:0;border-radius:16px 16px 0 0;padding:14px 20px;font:800 16px Figtree,sans-serif}.ds-tab small{font-size:12px;color:#5E5046}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le carnet de rendez-vous",
+    "overview": "La page est l’agenda de l’institut ouvert sur le comptoir : papier, surligneur, tampons, tickets perforés, onglets et ruban adhésif. Le halo en est le fil rouge.",
+    "keyCharacteristics": [
+      "Papier #ECE3D4 et surligneur #F8FBA4 imposés par le client",
+      "Serif ronde Young Serif + sans-serif Figtree",
+      "Chaque section a sa mise en scène dans la même grammaire de papeterie",
+      "Mouvement riche, mouvement réduit complet"
+    ],
+    "rules": [
+      {
+        "name": "The Highlighter Rule",
+        "body": "Le lime surligne ou sature une section ; sur fond sombre, le marqueur couvre toute la ligne.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Serif Rule",
+        "body": "Prix et chiffres en Young Serif tabulaire ; l’information utilitaire en Figtree.",
+        "section": "typography"
+      },
+      {
+        "name": "The Taped-Down Rule",
+        "body": "Ce qui est posé a une ombre décalée ; ce qui est collé n’en a presque pas.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do garder le lime pour surligner ou saturer.",
+      "Do poser les photos en arche ou en tirage scotché.",
+      "Do prévoir le mode mouvement réduit."
+    ],
+    "donts": [
+      "Don't mettre de libellé au-dessus d’un titre.",
+      "Don't écrire du lime sur fond clair.",
+      "Don't inventer chiffres, avis ou notes."
+    ]
+  }
+}

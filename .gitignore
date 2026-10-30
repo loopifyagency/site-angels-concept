@@ -1,0 +1,6 @@
+.impeccable/questions/
+.impeccable/review/
+.impeccable/mocks/
+node_modules/
+__pycache__/
+*.pyc
